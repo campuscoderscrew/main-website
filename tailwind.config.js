@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         notable: ['Notable', 'sans-serif'],
+        neuton: ['Neuton']
       },
     },
   },
