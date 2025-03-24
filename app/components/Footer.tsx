@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-[#2D336B] text-white py-8">
       <div className="container mx-auto">
-        <div className="flex justify-center space-x-8">
+        <div className="flex justify-center space-x-8 font-neuton text-2xl">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
             Instagram
           </a>

@@ -9,13 +9,13 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#2D336B] text-white p-2 md:p-0 z-50 flex">
       <Padding/>
-      <div className="space-x-6 flex-10">
+      <div className="space-x-6 flex-10 md:py-2">
         <a href="#about">
           <img src={CCC_icon} className="h-10"></img>
         </a>
       </div>
 
-      <div className="flex-70 justify-between items-center align-middle">  
+      <div className="flex-70 justify-between items-center align-middle md:mt-2">  
         <nav className="space-x-6 font-neuton text-2xl flex justify-end">
           <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
           <a href="#team" className="hover:text-gray-300 transition-colors">Our Team</a>
