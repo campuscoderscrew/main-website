@@ -1,11 +1,23 @@
 import React from 'react';
+import { useSpring, animated, useInView } from '@react-spring/web';
 
 import brennen_pic from "../../public/brennen.jpg"
 import franco_pic from "../../public/franco.png"
 
 export function Team() {
+    const [ref, inView] = useInView({
+        rootMargin: '0px',
+        amount: 0.2,
+        once: true
+    });
+
+    const fadeIn = useSpring({
+        opacity: inView ? 1 : 0,
+        config: { duration: 500 }
+    });
+
     return (
-        <div>
+        <animated.div ref={ref} style={fadeIn}>
             <div className="text-center">
                 <p className="text-5xl text-center font-neuton font-semibold" style={{color: "#7886C7"}}>
                     OUR CREW
@@ -41,7 +53,6 @@ export function Team() {
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </animated.div>
     )
 }
