@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-[#FFF2F2] text-black py-8 h-4/5" id='contact-us'>
       <div className="container mx-auto">
-        <h1 className='text-[#7886C7] font-bold text-center text-6xl mb-5'>Reach Out To Us!</h1>
+        <h1 className='text-[#7886C7] font-bold text-center text-6xl mb-5 px-32'>Have a student organization in mind? Reach out to us!</h1>
         <div className="flex justify-center space-x-8">
           <a 
             href="https://instagram.com" 
