@@ -72,7 +72,7 @@ export function Team() {
                                     }}
                                 >
                                     <p className="text-white text-xl font-neuton text-center px-4">
-                                        Computer Science Freshman
+                                        Computer Science Sophomore
                                     </p>
                                 </div>
                             </animated.div>

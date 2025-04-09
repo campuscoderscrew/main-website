@@ -25,10 +25,10 @@ export function About() {
     return (
         <main className="flex justify-center items-center pt-20">
             <section id="about" className="mx-0 md:mx-10 lg:mx-20 py-8 md:py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                    <div className="">
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-4 items-center">
+                    <div className="mb-8 md:mb-0">
                         <animated.h2 
-                            className="w-10 mb-4 text-6xl lg:text-8xl font-notable gap-y-2 text-center flex items-center" 
+                            className="text-6xl lg:text-8xl font-notable text-center" 
                             style={{...titleSpring, color: "#7886C7"}}
                         >
                             Campus Coders Crew
@@ -36,7 +36,7 @@ export function About() {
                     </div>
                     <div className="flex justify-center items-center md:items-start p-6">
                         <animated.p 
-                            className="w-11/16 text-4xl text-black text-center font-neuton"
+                            className="text-4xl text-black text-center font-neuton"
                             style={missionSpring}
                         >
                             Empowering every aspiring student to collaborate, innovate, and grow in a flexible, inclusive, and agile community
