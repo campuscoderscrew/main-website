@@ -30,8 +30,8 @@ export function Team() {
     });
 
     return (
-        <animated.div ref={ref} style={fadeIn}>
-            <div className="text-center">
+        <div className={"bg-[#FFF2F2]"}>
+            <animated.div ref={ref} style={fadeIn} className="text-center">
                 <p className="text-5xl text-center font-neuton font-semibold" style={{color: "#7886C7"}}>
                     OUR CREW
                 </p>
@@ -124,7 +124,7 @@ export function Team() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </animated.div>
+            </animated.div>
+        </div>
     )
 }

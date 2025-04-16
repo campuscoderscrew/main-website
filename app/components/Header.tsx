@@ -1,28 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router';
 import CCC_icon from "../../public/campus_coders_crew_icon.png"
 
 import { Padding } from './Padding';
 
-
-
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-[#2D336B] text-white p-2 md:p-0 z-50 flex">
-      <Padding/>
-      <div className="space-x-6 flex-10 md:py-2">
-        <a href="#about">
-          <img src={CCC_icon} className="h-10"></img>
-        </a>
-      </div>
-
-      <div className="flex-70 justify-between items-center align-middle md:mt-2">  
-        <nav className="space-x-6 font-neuton text-2xl flex justify-end">
-          <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
-          <a href="#team" className="hover:text-gray-300 transition-colors">Our Team</a>
-          <a href="#contact" className="hover:text-gray-300 transition-colors">Contact Us</a>
-        </nav>
-      </div>
-      <Padding/>
-    </header>
+    <nav>
+      <header className="fixed top-0 left-0 right-0 bg-transparent text-white p-2 md:p-0 z-50 flex">
+        <Padding/>
+        <div className="flex-70 justify-between items-center align-middle md:mt-2">  
+          <nav className="space-x-6 font-neuton text-2xl flex justify-end">
+            <Link to="/" className="transition-colors">HOME</Link>
+            <Link to="/apply" className="transition-colors">APPLY</Link>
+            <Link to="/events" className="transition-colors">EVENTS</Link>
+            <Link to="/crew" className="transition-colors">CREW</Link>
+            <Link to="/archive" className="transition-colors">ARCHIVE</Link>
+          </nav>
+        </div>
+        <Padding/>
+      </header>
+    </nav>
+    
   );
 } 

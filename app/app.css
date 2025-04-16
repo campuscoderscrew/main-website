@@ -23,3 +23,7 @@ body {
 .font-neuton {
   font-family: var(--font-neuton);
 }
+
+.font-league-spartan {
+  font-family: var(--font-league-spartan);
+}

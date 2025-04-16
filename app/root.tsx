@@ -5,12 +5,20 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  Routes,
+  Route
 } from "react-router";
+import type { LinksFunction } from "react-router";
 
-import type { Route } from "./+types/root";
 import "./app.css";
+import { Home } from './pages/Home';
+import { Apply } from './pages/Apply';
+import { Events } from './pages/Events';
+import { Crew } from './pages/Crew';
+import { Archive } from './pages/Archive';
+import { Header } from './components/Header';
 
-export const links: Route.LinksFunction = () => [
+export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -24,6 +32,10 @@ export const links: Route.LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Notable&display=swap"
   },
   {
     rel: "stylesheet",
@@ -50,10 +62,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/apply" element={<Apply />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/archive" element={<Archive />} />
+      </Routes>
+    </div>
+  );
 }
 
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({ error }: { error: unknown }) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
