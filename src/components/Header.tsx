@@ -1,6 +1,7 @@
 import React from 'react';
 import CCC_icon from "../../public/campus_coders_crew_icon.png"
 
+import { Link } from "react-router-dom";
 import { Padding } from './Padding';
 
 
@@ -17,9 +18,11 @@ export function Header() {
 
       <div className="flex-70 justify-between items-center align-middle md:mt-2">  
         <nav className="space-x-6 font-neuton text-2xl flex justify-end">
-          <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
-          <a href="#team" className="hover:text-gray-300 transition-colors">Our Team</a>
-          <a href="#contact" className="hover:text-gray-300 transition-colors">Contact Us</a>
+          <Link to="/" className="hover:text-gray-300 transition-colors">HOME</Link>
+          <Link to="/requests" className="hover:text-gray-300 transition-colors">REQUESTS</Link>
+          <Link to="/events" className="hover:text-gray-300 transition-colors">EVENTS</Link>
+          <Link to="/crew" className="hover:text-gray-300 transition-colors">CREW</Link>
+          <Link to="/archive" className="hover:text-gray-300 transition-colors">ARCHIVE</Link>
         </nav>
       </div>
       <Padding/>
