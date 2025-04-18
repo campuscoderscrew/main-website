@@ -8,7 +8,7 @@ import { Padding } from './Padding';
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-[#2D336B] text-white p-2 md:p-0 z-50 flex">
+    <header className="fixed top-0 left-0 right-0 bg-transparent text-white p-2 md:p-0 z-50 flex">
       <Padding/>
       <div className="space-x-6 flex-10 md:py-2">
         <a href="#about">
