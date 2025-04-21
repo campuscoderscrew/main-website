@@ -7,7 +7,7 @@ export function OurGoals(){
         <div className="flex flex-col justify-center items-center">
             <h1 className="text-6xl font-bold text-[#2D336B] pb-6">Our Goals</h1>
             <div className="flex flex-row gap-x-75">
-                <div className="flex-col">
+                <div className="flex-col flex items-center text-center">
                     <img 
                         src={learning_image}
                         alt='learning'
@@ -16,7 +16,7 @@ export function OurGoals(){
                     />
                     <p className="text-4xl font-bold text-[#7886C7]">LEARNING</p>
                 </div>
-                <div className="flex-col">
+                <div className="flex-col flex items-center text-center">
                     <img 
                         src={service_image}
                         alt='learning'
@@ -25,7 +25,7 @@ export function OurGoals(){
                     />
                     <p className="text-4xl font-bold text-[#7886C7]">SERVICE</p>
                 </div>
-                <div className="flex-col">
+                <div className="flex-col flex items-center text-center">
                     <img 
                         src={opportunity_image}
                         alt='learning'

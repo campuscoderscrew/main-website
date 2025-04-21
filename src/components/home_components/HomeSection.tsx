@@ -3,6 +3,7 @@ import { useSpring, animated } from "@react-spring/web"
 import home_background from '../../../public/home-background-image.png'
 import { Welcome } from "./Welcome";
 import { OurGoals } from "./OurGoals";
+import { Meetings } from "./Meetings";
 
 export default function HomeSection () {
     const titleSpring = useSpring({
@@ -59,10 +60,12 @@ export default function HomeSection () {
                     </section>
                 </main>
             </div>
-            <div className="h-64"/>
+            <div className="h-64" />
             <Welcome />
-            <div className="h-64"/>
+            <div className="h-64" />
             <OurGoals />
+            <div className="h-64" />
+            <Meetings />
         </div>
     )
 }
