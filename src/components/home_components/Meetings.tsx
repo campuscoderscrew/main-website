@@ -25,7 +25,7 @@ export function Meetings(){
     return (    
         <div className="flex flex-col justify-center items-center">
             <h1 className="text-6xl text-[#2D336B] pb-5 font-bold">Upcoming Meetings</h1>
-            <p className="text-[#7886C7] text-xl pb-5">
+            <p className="text-[#7886C7] text-xl mb-16">
                 Some events have restricted attendance. Please follow guidelines as listed
             </p>
             <div className="flex flex-row gap-x-12 w-5/6">
@@ -56,7 +56,7 @@ export function Meetings(){
                     </div>
                 ))}
             </div>
-            <button className='w-fit h-fit p-4 bg-[#2D336B] text-[#FFF2F2]'>
+            <button className='w-fit h-fit p-3 bg-[#2D336B] text-[#FFF2F2] mt-10 rounded-md'>
                 Click here for more!
             </button>
         </div>

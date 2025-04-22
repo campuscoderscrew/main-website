@@ -9,14 +9,13 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-[#FFF2F2] flex flex-col">
             <Header />
-            <main className="flex-grow">
+            <main className="flex-grow flex flex-col">
                 <HomeSection />
                 <div className="h-64" />
                 <Team/>
+                <div className="h-64"/>
+                <Footer />
             </main>
-            <div className="h-64"/>
-            <Footer />
-            <div className="h-64"/>
         </div>
     )
 }
