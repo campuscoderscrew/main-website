@@ -5,7 +5,7 @@ const BoardData : Profile[]= [
         name: "Brennen Le",
         officialTitle: "President",
         funTitle: "Captain",
-        image: "../../public/brennen.jpg",
+        image: "../../public/profiles/brennen.jpg",
         major: "Computer Science & Mathematics Dual Degree, Computational Finance Minor Sophomore",
         bio: ""
     },
@@ -13,7 +13,7 @@ const BoardData : Profile[]= [
         name: "Franco Molinari",
         officialTitle: "Treasurer",
         funTitle: "First Mate",
-        image: "../../public/franco.png",
+        image: "../../public/profiles/franco.png",
         major: "Computer Engineering Freshman",
         bio: "Software Development Engineer intern @ AWS"
     },

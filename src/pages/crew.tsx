@@ -1,4 +1,4 @@
-import { Header } from "src/components/Header"
+import { Header } from "../components/Header"
 import { type Profile } from "src/types"
 
 
@@ -16,18 +16,7 @@ interface ProfileArgs {
 }
 
 
-
-function ExecutiveBoardContainer() {
-    return (
-        <div className="flex flex-row justify-center flex-wrap">
-            {BoardData.map((profile) => (
-            <EBoardMember profile={profile} />
-            ))}
-        </div>
-    )
-}
-
-function EBoardMember({profile} : ProfileArgs) {
+function RenderProfile({profile} : ProfileArgs) {
     const [profileFlipped, setProfileFlippped] = useState(false);
     const profileSpring = useSpring({
         transform: profileFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
@@ -44,7 +33,7 @@ function EBoardMember({profile} : ProfileArgs) {
                 <CurvedText name={profile.funTitle} reversed={false}/>
             </div>
 
-            <div className="flex items-center justify-center mt-40 relative" id="picture">
+            <div className="flex items-center justify-center mt-40 relative z-20" id="picture">
                 <div 
                     className="relative rounded-full h-80 w-80 cursor-pointer"
                     onMouseEnter={() => setProfileFlippped(true)}
@@ -61,7 +50,7 @@ function EBoardMember({profile} : ProfileArgs) {
                         <div className="absolute w-full h-full" style={{ backfaceVisibility: 'hidden' }}>
                             <div className="relative rounded-full h-80 w-80 overflow-hidden relative">
                                 <img 
-                                    src={profile.image != "" ? profile.image : "../../public/brennen.jpg"} 
+                                    src={profile.image != "" ? profile.image : "../../public/profiles/empty_profile.jpg"} 
                                     alt={profile.name}
                                     className="h-full w-full"
                                 />
@@ -104,11 +93,11 @@ export default function Crew() {
     });
 
     return (
-        <>
+        <div className=" bg-[#FFF2F2]">
         <Header/>
             <animated.div ref={ref} style={fadeIn}>
                 <div className="text-center">
-                    <p className="text-6xl text-center text-[#2D336B] font-neuton mt-30 font-semibold tracking-widest	">
+                    <p className="text-6xl text-center text-[#2D336B] font-neuton mt-30 font-semibold tracking-widest">
                         OUR CREW
                     </p>
 
@@ -116,7 +105,11 @@ export default function Crew() {
                         Executive Board
                     </div>
 
-                    <ExecutiveBoardContainer/>
+                    <div className="flex flex-row justify-center flex-wrap">
+                        {BoardData.map((profile) => (
+                        <RenderProfile profile={profile} />
+                        ))}
+                    </div>
 
 
                     <div className="text-5xl text-center text-[#7886C7] font-neuton mt-20 font-semibold tracking-wider">
@@ -125,13 +118,13 @@ export default function Crew() {
 
                     <div className="flex flex-row justify-center ">
                         {MembersData.map((profile) => (
-                        <EBoardMember profile={profile} />
+                        <RenderProfile profile={profile} />
                         ))}
                     </div>
 
                 </div>
             </animated.div>
-        </>
+        </div>
         
     )
 }

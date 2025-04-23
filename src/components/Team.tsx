@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useSpring, animated, useInView } from '@react-spring/web';
 
-import brennen_pic from "../../public/brennen.jpg"
-import franco_pic from "../../public/franco.png"
+import brennen_pic from "../../public/profiles/brennen.jpg"
+import franco_pic from "../../public/profiles/franco.png"
 
 export function Team() {
     const [ref, inView] = useInView({
