@@ -26,11 +26,10 @@ export function Header() {
     };
   }, []);
 
-  const textColor = scrolledPastHero ? 'text-black' : 'text-white';
-  const underlineColor = scrolledPastHero ? 'bg-black' : 'bg-white';
+  const headerBGColor = scrolledPastHero ? 'bg-[#2D336B]' : 'bg-transparent';
 
   return (
-    <header className={`fixed top-0 left-0 right-0 bg-transparent p-2 md:p-0 z-50 flex ${textColor}`}>
+    <header className={`fixed top-0 left-0 right-0 ${headerBGColor} p-4 md:p-1 z-50 flex text-white`}>
       <Padding/>
       <div className="flex-70 justify-between items-center align-middle md:mt-2">  
         <nav className="space-x-6 font-neuton text-2xl flex justify-end">
@@ -44,7 +43,7 @@ export function Header() {
               HOME
             </Link>
             {hoveredLink === 'HOME' && (
-              <div className={`absolute bottom-0 left-0 w-full h-0.5 ${underlineColor}`} />
+              <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-white`} />
             )}
           </div>
           
@@ -58,7 +57,7 @@ export function Header() {
               REQUESTS
             </Link>
             {hoveredLink === 'REQUESTS' && (
-              <div className={`absolute bottom-0 left-0 w-full h-0.5 ${underlineColor}`} />
+              <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-white`} />
             )}
           </div>
           
@@ -72,7 +71,7 @@ export function Header() {
               EVENTS
             </Link>
             {hoveredLink === 'EVENTS' && (
-              <div className={`absolute bottom-0 left-0 w-full h-0.5 ${underlineColor}`} />
+              <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-white`} />
             )}
           </div>
           
@@ -86,7 +85,7 @@ export function Header() {
               CREW
             </Link>
             {hoveredLink === 'CREW' && (
-              <div className={`absolute bottom-0 left-0 w-full h-0.5 ${underlineColor}`} />
+              <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-white`} />
             )}
           </div>
           
@@ -100,7 +99,7 @@ export function Header() {
               ARCHIVE
             </Link>
             {hoveredLink === 'ARCHIVE' && (
-              <div className={`absolute bottom-0 left-0 w-full h-0.5 ${underlineColor}`} />
+              <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-white`} />
             )}
           </div>
         </nav>

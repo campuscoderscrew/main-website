@@ -9,30 +9,30 @@ export default function HomeSection () {
 
     return (
         <div className="flex-col">
-            <div style={{backgroundImage: `url(${home_background})`}} className={`h-full bg-cover bg-center bg-no-repeat`}>
-                <main className={`flex flex-col justify-center items-center pt-20`}>
-                    <section id="about" className="mx-0 md:mx-10 lg:mx-20 py-8 md:py-16 z-20 relative rounded-lg px-4 md:px-8 lg:px-12">
-                        <div className="w-1/2 flex flex-col justify-center items-center gap-y-16">
-                            <h2 
-                                className="text-[#7886C7] text-5xl lg:text-5xl font-notable font-bold text-center" 
-                            >
-                                CAMPUS CODERS CREW
-                            </h2>
+            <div 
+                style={{backgroundImage: `url(${home_background})`}} 
+                className="min-h-screen bg-cover bg-center bg-no-repeat relative"
+            >
+                <div className="absolute inset-0 flex flex-col justify-center">
+                    <div className="w-64 h-64 md:w-3/4 lg:w-2/3 xl:w-1/2 px-3 flex flex-col justify-center ml-6 md:ml-14 lg:ml-22 gap-y-20 md:gap-y-20">
+                        <h2 
+                            className="text-[#7886C7] text-4xl md:text-5xl lg:text-5xl font-notable font-bold text-center" 
+                        >
+                            CAMPUS CODERS CREW
+                        </h2>
 
-                            <p 
-                                className="w-11/12 text-4xl text-white font-extrabold text-center"
-                            >
-                                Empowering every aspiring student to collaborate, innovate, and grow in a flexible, inclusive, and agile community
-                            </p>
-                        </div>
-                        <div className="h-32"/>
-                        <div className="text-center relative top-32">
-                            <p className="text-[#2D336B] text-3xl font-bold" >
-                                We build websites for clubs. By Students. For Students.
-                            </p>
-                        </div>
-                    </section>
-                </main>
+                        <p 
+                            className="w-full md:w-11/12 text-2xl md:text-3xl lg:text-4xl text-white font-extrabold text-center"
+                        >
+                            Empowering every aspiring student to collaborate, innovate, and grow in a flexible, inclusive, and agile community
+                        </p>
+                    </div>
+                    <div className="absolute -bottom-16 md:-bottom-16 left-0 right-0 text-center">
+                        <p className="text-[#2D336B] text-2xl md:text-3xl font-bold">
+                            We build websites for clubs. By Students. For Students.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div className="h-64" />
             <Welcome />
