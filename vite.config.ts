@@ -8,7 +8,7 @@ export default defineConfig({
     assetsDir: "assets",
   },
   plugins: [tailwindcss(), tsconfigPaths()],
-  base: '/'
+  base: '/main-website/'
 });
 
 /**
